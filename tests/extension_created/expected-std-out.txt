@@ -1,4 +1,4 @@
-Name|address_standardizer
-Name|plpgsql
-Name|postgis
-Name|postgis_topology
+address_standardizer
+plpgsql
+postgis
+postgis_topology

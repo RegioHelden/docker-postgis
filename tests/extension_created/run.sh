@@ -25,7 +25,6 @@ psql() {
 }
 
 output=$(mktemp)
-. ~/official-images/test/retry.sh --tries "$POSTGRES_TEST_TRIES" --sleep "$POSTGRES_TEST_SLEEP" "psql -c '\x on' -c '\dx' | grep ^Name > $output"
-cat $output
+. ~/official-images/test/retry.sh --tries "$POSTGRES_TEST_TRIES" --sleep "$POSTGRES_TEST_SLEEP" "psql -c '\dx' > $output"
+cat $output | cut -d'|' -f 1
 rm $output
-
