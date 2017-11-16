@@ -24,5 +24,5 @@ psql() {
         "$@"
 }
 
-. "~/official-images/retry.sh" --tries "$POSTGRES_TEST_TRIES" --sleep "$POSTGRES_TEST_SLEEP" "psql -c '\x on' -c '\dx' | grep ^Name"
+. "~/official-images/test/retry.sh" --tries "$POSTGRES_TEST_TRIES" --sleep "$POSTGRES_TEST_SLEEP" "psql -c '\x on' -c '\dx' | grep ^Name"
 
