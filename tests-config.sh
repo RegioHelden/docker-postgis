@@ -1,4 +1,4 @@
-testAlias[regiohelden/postgis]=postgres
-imageTests[regiohelden/postgis]='
+testAlias[postgis]=postgres
+imageTests[postgis]='
     extension_created
 '
