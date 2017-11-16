@@ -1,0 +1,30 @@
+language: bash
+services: docker
+
+env:
+	- SUBDIR=9.6/2.4
+	- SUBDIR=9.6/2.3
+	- SUBDIR=9.5/2.4
+	- SUBDIR=9.5/2.3
+	- SUBDIR=9.5/2.2
+	- SUBDIR=9.4/2.4
+	- SUBDIR=9.4/2.3
+	- SUBDIR=9.4/2.2
+	- SUBDIR=9.4/2.1
+	- SUBDIR=9.3/2.4
+	- SUBDIR=9.3/2.3
+	- SUBDIR=9.3/2.2
+	- SUBDIR=9.3/2.1
+	- SUBDIR=10/2.4
+
+
+before_script:
+    - env | sort
+    - cd "$SUBDIR"
+    - image="postgis:${SUBDIR/\//_}"
+
+script:
+    - travis_retry docker build -t "$image" .
+
+after_script:
+    - docker images
