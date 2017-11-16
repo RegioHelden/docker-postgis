@@ -1,5 +1,7 @@
 # regiohelden/postgis
 
+[![Build Status](https://travis-ci.org/RegioHelden/docker-postgis.svg?branch=master)](https://travis-ci.org/RegioHelden/docker-postgis)
+
 Simple docker image for PostgreSQL+PostGIS.
 This image builds upon the [official docker postgres](https://hub.docker.com/_/postgres/) image and
 simply adds the postgis packages to it.
