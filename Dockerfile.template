@@ -6,3 +6,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         postgresql-%%PG_VERSION%%-postgis-%%POSTGIS_VERSION%% \
         postgresql-%%PG_VERSION%%-postgis-%%POSTGIS_VERSION%%-scripts \
         && rm -rf /var/lib/apt/lists/*
+
+COPY create_extension_postgis.sh /docker-entrypoint-initdb.d/

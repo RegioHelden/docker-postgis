@@ -15,3 +15,4 @@ for pg_version in [0-9]*; do
 done
 
 sed -e 's@%%TRAVIS_ENV%%@'"$travis_env"'@' .travis.yml.template > .travis.yml
+
