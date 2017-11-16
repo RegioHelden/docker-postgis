@@ -24,7 +24,7 @@ before_script:
 
 script:
   - travis_retry docker build -t "$image" -f "$SUBDIR"/Dockerfile .
-  - ~/official-images/test/run.sh "$image"
+  - ~/official-images/test/run.sh -c ~/official-images/test/config.sh -c tests-config.sh "$image"
 
 after_script:
   - docker images
