@@ -2,6 +2,7 @@ FROM postgres:%%PG_VERSION%%
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
         postgresql-%%PG_VERSION%%-postgis-%%POSTGIS_VERSION%% \
+        postgresql-%%PG_VERSION%%-postgis-%%POSTGIS_VERSION%%-scripts \
         && rm -rf /var/lib/apt/lists/*
