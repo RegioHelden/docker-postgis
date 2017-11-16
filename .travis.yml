@@ -10,11 +10,9 @@ env:
   - SUBDIR=9.4/2.4
   - SUBDIR=9.4/2.3
   - SUBDIR=9.4/2.2
-  - SUBDIR=9.4/2.1
   - SUBDIR=9.3/2.4
   - SUBDIR=9.3/2.3
   - SUBDIR=9.3/2.2
-  - SUBDIR=9.3/2.1
   - SUBDIR=10/2.4
 
 
