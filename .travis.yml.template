@@ -5,12 +5,12 @@ env:
 %%TRAVIS_ENV%%
 
 before_script:
-    - env | sort
-    - cd "$SUBDIR"
-    - image="postgis:${SUBDIR/\//_}"
+  - env | sort
+  - cd "$SUBDIR"
+  - image="postgis:${SUBDIR/\//_}"
 
 script:
-    - travis_retry docker build -t "$image" .
+  - travis_retry docker build -t "$image" .
 
 after_script:
-    - docker images
+  - docker images

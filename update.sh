@@ -10,7 +10,7 @@ for pg_version in [0-9]*; do
         sed -e 's/%%PG_VERSION%%/'"$pg_version"'/g' \
             -e 's/%%POSTGIS_VERSION%%/'"$postgis_version"'/g' \
             Dockerfile.template > $pg_version/$postgis_version/Dockerfile
-        travis_env="\t- SUBDIR=$pg_version/$postgis_version\n${travis_env:-}"
+        travis_env="  - SUBDIR=$pg_version/$postgis_version\n${travis_env:-}"
     done
 done
 
