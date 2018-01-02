@@ -32,4 +32,4 @@ db:
 
 # Limitations
 
-Currentl, only the non-alpine versions are built.
+Currently, only the non-alpine versions are built.
