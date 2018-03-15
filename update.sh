@@ -11,6 +11,7 @@ for pg_version in [0-9]*; do
             -e 's/%%POSTGIS_VERSION%%/'"$postgis_version"'/g' \
             Dockerfile.template > $pg_version/$postgis_version/Dockerfile
         travis_env="  - SUBDIR=$pg_version/$postgis_version\n${travis_env:-}"
+        cp create_extension_postgis.sh $pg_version/$postgis_version/
     done
 done
 
